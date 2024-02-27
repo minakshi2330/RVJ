@@ -88,3 +88,7 @@
   yield(arg2)
  end
  simple('Dave',"minu") { |name| puts "My name is #{name}" }
+
+ #8>>>>>>>>>>>>>>>>>
+
+ 
