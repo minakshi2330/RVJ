@@ -34,11 +34,19 @@
 
 #4>>>>>>>>>>>>>>>>>>>>>>
 
- case
- when ENV['A'] == 'A'
-  puts 'A'
- when ENV['B'] == 'Y'
-  puts 'B'
- else
-  puts 'Neither A nor B'
-end
+#  case
+#  when ENV['A'] == 'A'
+#   puts 'A'
+#  when ENV['B'] == 'Y'
+#   puts 'B'
+#  else
+#   puts 'Neither A nor B'
+# end
+
+#5>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+minu = ["minu", "minakshi", "nishant", "adarsh","subbu"]
+
+puts minu 
+puts 
+puts minu.join("/")
