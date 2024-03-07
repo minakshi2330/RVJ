@@ -55,20 +55,20 @@
 
 #5>>>>>>>>>>>>>>>>>>>>
 
-class Die 
-  def initialize
-    roll
-  end
+# class Die 
+#   def initialize
+#     roll
+#   end
 
-  def roll 
-    @number_showing = 1 + rand(6)
-  end 
+#   def roll 
+#     @number_showing = 1 + rand(6)
+#   end 
 
-  def showing 
-    @number_showing
-  end 
-end
-puts Die.new.showing
+#   def showing 
+#     @number_showing
+#   end 
+# end
+# puts Die.new.showing
 
 #6>>>>>>>>>>>>>>>>>>>>
 
