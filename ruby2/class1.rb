@@ -135,13 +135,13 @@
 # puts num
 
 #11>>>>>>>>>>>>>>>
- # def list(*values)
- #  values.each do |value|
- #    # do something with value
- #    puts value
- #  end
- # end
- # list(100)
+ def list(*values)
+  values.each do |value|
+    # do something with value
+    puts value
+  end
+ end
+ list(100)
 
  #12>>>>>>>>>>>
 
@@ -149,5 +149,20 @@
  # puts a.uniq
 
 
-puts   numbers = Array(1..10) # => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  puts numbers = (1..10).to_a # => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# puts   numbers = Array(1..10) # => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#   puts numbers = (1..10).to_a # => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+#13>>>>>>>>>>>>
+
+# class A
+#   def foo
+#     return "bar"
+#   end
+# end
+
+# m = A.new.method(:foo)
+# m.call # => "bar"
+# n = m.clone.call # => "bar"
+
+
+

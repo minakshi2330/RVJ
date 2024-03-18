@@ -67,14 +67,26 @@
 
 #7 
 
-i = 1
-word = []
-while i <= 5
-	puts "a #{i}"
-	word.push(i)
-	i += 1 
-	puts " fiest number of 'A' letter #{word}"
-	puts "now other number of letter #{i}"
-end 
-puts "the letters"
-word.each {|wo| puts wo}
+# i = 1
+# word = []
+# while i <= 5
+# 	puts "a #{i}"
+# 	word.push(i)
+# 	i += 1 
+# 	puts " fiest number of 'A' letter #{word}"
+# 	puts "now other number of letter #{i}"
+# end 
+# puts "the letters"
+# word.each {|wo| puts wo}
+
+#8>>>>>>>>>>>>>>>>
+
+class A
+  def foo
+    return "bar"
+  end
+end
+
+m = A.new.method(:foo)
+m.call # => "bar"
+n = m.clone.call # => "bar"
