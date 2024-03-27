@@ -193,17 +193,123 @@
 #17>>>>>>>>>>>>>
 
 
-$age = 5
+# $age = 5
 
-case $age 
-when 0 .. 2
-   puts "baby"
-when 3 .. 6
-   puts "little child"
-when 7 .. 12
-   puts "child"
-when 13 .. 18
-   puts "youth"
-else
-   puts "adult"
+# case $age 
+# when 0 .. 2
+#    puts "baby"
+# when 3 .. 6
+#    puts "little child"
+# when 7 .. 12
+#    puts "child"
+# when 13 .. 18
+#    puts "youth"
+# else
+#    puts "adult"
+# end
+
+
+
+#18>>>>>>>>>>
+# for i in 1..10
+#    puts i
+# end
+
+
+# i = gets.chomp.to_i 
+# a = 1
+# while a <= i 
+# 	j = 1
+# 	while j <= a
+# 	print "*"*a
+# 	j += 1
+#    end
+# 	a = a+1
+
+# end
+
+#modual>>>>>>>>>>>>>>>>>>>>>
+
+# module A
+#    def a1
+#    	puts "minu"
+#    end
+#    def a2
+#    	puts "minakshi"
+#    end
+# end
+# module B
+#    def b1
+#    	puts "mina"
+#    end
+#    def b2
+#    	puts "tina"
+#    end
+# end
+
+# class Sample
+# include A
+# include B
+#    def s1
+#    	puts "tinu"
+#    end
+# end
+
+# samp = Sample.new
+# samp.a1
+# samp.a2
+# samp.b1
+# samp.b2
+# samp.s1
+
+
+#string
+
+# myStr = String.new("THIS IS TEST")
+# foo = myStr.downcase
+
+# puts "#{foo}"
+
+
+# myname = String.new("minu is a good girl")
+# name  = myname.upcase
+
+# puts name
+
+
+# puts %{minu}
+# puts %Q{ minashi}
+# puts "igjhyt"
+# puts 'uhireg'
+# puts 'ergt\'\''
+# minu = String.new("she is very honest")
+# name = minu.upcase
+# puts name
+
+
+
+# puts "abc \0\0abc \0\0".unpack('A6Z6')   #=> ["abc", "abc "]
+
+
+# name = Array.new(5,"minu")
+# puts name
+
+# nums = Array.new(10) { |e| e = e * 2 }
+
+# puts "#{nums}"
+
+# months = Hash.new( "month" => 3466 )
+
+# puts "#{months[0]}"
+# puts "#{months[100]}"
+puts "enter your score"
+score = gets.to_i 
+
+result = case score
+when 0..40 then "fail"
+when 41..50 then "psss"
+when 51..60 then "top"
+when 51..100 then "toper"
+else "invalid score"
 end
+puts result
