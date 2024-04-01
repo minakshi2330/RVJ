@@ -173,31 +173,29 @@
      #7>>>>>>>>>>>>>>>>>>>>>>>
    $ninu = "minu"
     class First
-    @@m = "minu" 
+    @m = "minu" 
     	def aliens
     @a = "this is the first man who sees alian"
     @b = "i belive that alians are exits"
     
        end
-       puts @@m
-       puts $ninu
+       # puts @m
+       # puts $ninu
     end
     class Second < First
     	def ali
     	c = "i'm team b who don't belive that aliens are exits"
     	d = "i belive that , in this whole unverse only we humans are exits"
-      puts c 
-      puts d
+      # puts c 
+      # puts d
       puts @a 
       puts @b
        end
-       puts $ninu
+       # puts $ninu
     end
-  
 
    first = First.new
    second  = Second.new
    first.aliens
-   
    second.ali
  
