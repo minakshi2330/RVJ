@@ -153,49 +153,54 @@
 
 #6>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-# class Name  
-# 	def navya
-# 		puts '''navya is a good girl
-# 		      i love her , but sometimes i want to bit her littile bit
-# 		      she also loves me '''
-# 		end
+class Name  
+	def navya
+		puts '''navya is a good girl
+		      i love her , but sometimes i want to bit her littile bit
+		      she also loves me '''
+		end
 
-# 		def nikita 
-# 			puts '''she is very sweet girl and she loves me very mushh 
-# 			but i love her more then she do i want to be with her all sometimes
-#              '''
-#          end
-#      end
-#      name = Name.new
-#      name.navya
-#      name.nikita
+		def nikita 
+			puts '''she is very sweet girl and she loves me very mushh 
+			but i love her more then she do i want to be with her all sometimes
+             '''
+         end
+     end
+     name = Name.new
+     name.navya
+     name.nikita
 
      #7>>>>>>>>>>>>>>>>>>>>>>>
-   $ninu = "minu"
-    class First
-    @m = "minu" 
-    	def aliens
-    @a = "this is the first man who sees alian"
-    @b = "i belive that alians are exits"
+   # $ninu = "minu"
+   #  class First
+   #  @m = "minu"  
+   #  	def aliens
+   #  @a = "this is the first man who sees alian"
+   #  @b = "i belive that alians are exits"
     
-       end
-       # puts @m
-       # puts $ninu
-    end
-    class Second < First
-    	def ali
-    	c = "i'm team b who don't belive that aliens are exits"
-    	d = "i belive that , in this whole unverse only we humans are exits"
-      # puts c 
-      # puts d
-      puts @a 
-      puts @b
-       end
-       # puts $ninu
-    end
+   #     end
+   #     # puts @m
+   #     # puts $ninu
+   #  end
+   #  class Second < First
+   #  	def ali
+   #  	c = "i'm team b who don't belive that aliens are exits"
+   #  	d = "i belive that , in this whole unverse only we humans are exits"
+   #    # puts c 
+   #    # puts d
+   #    puts @a 
+   #    puts @b
+   #     end
+   #     # puts $ninu
+   #  end
 
-   first = First.new
-   second  = Second.new
-   first.aliens
-   second.ali
+   # first = First.new
+   # second  = Second.new
+   # first.aliens
+   # second.ali
  
+
+ #8>>>>>>>>>>>>>>>
+
+
+   
