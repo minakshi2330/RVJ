@@ -1,0 +1,43 @@
+ <div class="col-lg-12">
+ <div class="card rounded-0 mt-5 mb-5">
+	<div class="card-body">
+  <h1 class="text-center">Listing Students</h1>
+	</div>
+	
+</div>
+
+<%= link_to "Create New student",new_student_path ,class: "btn btn-primary btn-lg mb-4 rounded-0"  %>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+		<th>Name</th>
+		<th>Title</th>
+        <th>Email</th>
+        <th>Roll Number</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Pincode</th>
+         <th>Address</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @students.each do |student|   %>
+		<tr>
+			<td><%=  student.name  %></td>
+			<td><%=  student.title %></td>
+			<td><%= student.personal_email %></td>
+			<td><%= student.rool_number %></td>
+			<td><%= student.city %></td>
+			<td><%= student.state %></td>
+			<td><%= student.country %></td>
+			<td><%= student.pincode %></td>
+			<td><%= student.address %></td>
+			<%# <td><%=student.full_address%>
+		</tr>
+		<% end %>
+
+	</tbody>
+</table>
+</div>

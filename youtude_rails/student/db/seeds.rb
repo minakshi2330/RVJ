@@ -30,5 +30,87 @@ pincode: '31113',
 address: 'lalpura'
 )
 
+student = Student.create(
+name: 'Nishant',
+title: 'kumar',
+personal_email: 'nishantkr@gmail.com',
+rool_number: '19ECOCS035',
+city: 'hajipur',
+state: 'bihar',
+country: 'India',
+pincode: '784587',
+address: 'hjp'
+)
 
+student = Student.create(
+name: 'Ruhi',
+title: 'kumari',
+personal_email: 'ruhikumari@gmail.com',
+rool_number: '19ECOCS022',
+city: 'udaipur',
+state: 'rajsthan',
+country: 'India',
+pincode: '784554',
+address: 'sanchi-umarda'
+)
+
+student = Student.create(
+name: 'Adarsh',
+title: 'jha',
+personal_email: 'Aj2099@gmail.com',
+rool_number: '19ECOCS01',
+city: 'patna',
+state: 'Bihar',
+country: 'India',
+pincode: '124554',
+address: 'ghandhi-chok'
+)
+
+student = Student.create(
+name: 'Subbu',
+title: 'kumari',
+personal_email: 'shambhavi@gmail.com',
+rool_number: '19ECOCS025',
+city: 'noida',
+state: 'UP',
+country: 'India',
+pincode: '344554',
+address: 'sector5'
+)
+
+student = Student.create(
+name: 'priti',
+title: 'kumari',
+personal_email: 'pirikumari@gmail.com',
+rool_number: '19ECOCS056',
+city: 'abhipur',
+state: 'Bihar',
+country: 'India',
+pincode: '124554',
+address: 'maniyarchak'
+)
+
+student = Student.create(
+name: 'Tabish',
+title: 'Mehmood',
+personal_email: 'tabishmehhue@gmail.com',
+rool_number: '19ECOCS078',
+city: 'bengluru',
+state: 'kerala',
+country: 'India',
+pincode: '344554',
+address: 'pata-nahi'
+)
+
+student = Student.create(
+name: 'Tabish',
+title: 'Mehmood',
+personal_email: 'tabishmehhue@gmail.com',
+rool_number: '19ECOCS078',
+city: 'bengluru',
+state: 'kerala',
+country: 'India',
+pincode: '344554',
+address: 'pata-nahi'
+)
 student.save
