@@ -26,6 +26,24 @@ class StudentsController < ApplicationController
    		render 'new'
    	end
    end
+
+   def edit
+      @student = Student.find(params[:id])
+   end
+
+   def update
+   	      @student = Student.find(params[:id])
+   	      if @student.update(student_params)
+   	      	redirect_to students_path, notice: 'Student has been updated successfully'
+   	      else
+   	      	render :edit  
+   	      end
+   end
+
+   def show
+   	# debugger
+   	@student = Student.find(params[:id])
+   end
  
   private
    def student_params

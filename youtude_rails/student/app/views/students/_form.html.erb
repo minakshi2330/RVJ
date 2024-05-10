@@ -1,0 +1,123 @@
+<%= form_with model: @student do |form|  %>
+<div class="row">
+
+<!--  <%# if @student.errors.any? %>
+  <div class="col-lg-12">
+  	<p class="lead">please fix errors below</p>
+  	<%#  @student.errors.full_messages.each do |message| %>
+      <p class="text-danger"><%#= message%></p>
+  	<%# end %>
+     
+  </div>
+  <%# end %> -->
+     
+     
+
+
+	<div class="col-lg-4">
+		<div class="from-group">
+			<%= form.label :name, class: 'mb-2' %>
+			<%= form.text_field  :name, class: 'form-control form-control-lg'%>
+			  	<%  @student.errors.full_messages_for(:name).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+
+	<div class="col-lg-4">
+		<div class="from-group">
+			<%= form.label :Title, class: 'mb-2' %>
+			<%= form.text_field  :title, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:title).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-4">
+		<div class="from-group">
+			<%= form.label :Personal_Email, class: 'mb-2' %>
+			<%= form.email_field :personal_email, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:personal_email).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+
+                 
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="from-group">
+			<%= form.label :Roll_Number, class: 'mb-2' %>
+			<%= form.text_field :rool_number, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:rool_number).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-3">
+		<div class="from-group">
+			<%= form.label :City, class: 'mb-2' %>
+			<%= form.text_field :city, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:city).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+		<div class="from-group">
+			<%= form.label :State, class: 'mb-2' %>
+			<%= form.text_field :state, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:state).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+		<div class="from-group">
+			<%= form.label :Country, class: 'mb-2' %>
+			<%= form.text_field :country, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:country).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+		<div class="from-group">
+			<%= form.label :Pincode, class: 'mb-2' %>
+			<%= form.text_field :pincode, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:pincode).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-4">
+		<div class="from-group">
+			<%= form.label :Address, class: 'mb-2' %>
+			<%= form.text_field  :address, class: 'form-control form-control-lg'%>
+			<%  @student.errors.full_messages_for(:address).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12 mt-4">
+		<%= form.submit class: 'btn btn-primary btn-lg' %>
+
+        <%= link_to "Back to Student" , students_path, class: "btn btn-outline-primary btn-lg " %>
+		</div>
+	</div>
+
+<% end %>

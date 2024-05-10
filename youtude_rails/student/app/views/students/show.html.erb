@@ -1,0 +1,33 @@
+<div class="col-lg-12">
+	<div class="card rounded-0 mt-5 mb-5">
+	<div class="card-body">
+  <h1 class="text-center"> Student Details</h1>
+  <div class="row"></div>
+  <div class="col-lg-6">
+  	<h3 class="text-center">Personal info</h3>
+  	
+
+<p class="lead"><strong>Name:</strong> <%= @student.name %></p>
+  	<p class="lead"><strong>Title:</strong> <%= @student.title %></p>
+   <p class="lead"><strong>Rool Nmuber:</strong> <%= @student.rool_number %></p>
+ <p class="lead"><strong>Personal Email:</strong> <%= @student.personal_email %></p>
+
+
+  </div>
+  <div class="col-lg-6">
+  	<h3 class="text-center">Address info</h3>
+  	<p class="lead"><strong>City:</strong> <%= @student.city %></p>
+  	<p class="lead"><strong>State:</strong> <%= @student.state %></p>
+   <p class="lead"><strong>Country:</strong> <%= @student.country %></p>
+    <p class="lead"><strong>Pincode:</strong> <%= @student.pincode %></p>
+ <p class="lead"><strong>Address:</strong> <%= @student.address %></p>
+
+
+  </div>
+  <%=  link_to 'Back to student', students_path, class: 'btn btn-outline-primary btn-lg'   %>
+
+   <%=  link_to 'Edit Student', edit_student_path(@student), class: 'btn btn-primary btn-lg'   %>
+	</div>
+</div>
+
+</div>
