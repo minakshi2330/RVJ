@@ -113,4 +113,15 @@ country: 'India',
 pincode: '344554',
 address: 'pata-nahi'
 )
+
+teacher = Teacher.create(
+ 
+ first_name: 'vikash',
+ last_name: 'kumar',
+ email: 'vikash@gmail.com',
+ subject: 'computer',
+ address: 'lalpura'
+
+
+	)
 student.save

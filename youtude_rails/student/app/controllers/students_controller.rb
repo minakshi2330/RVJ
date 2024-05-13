@@ -7,8 +7,9 @@ class StudentsController < ApplicationController
      @student = Student.new
 	end
    
-   def create
+  def create
    	@student = Student.new(student_params)
+       Student.new(student_params)
    	# @student = Student.new(name: student_params[:name], 
    	# 	title: student_params[:title],
    	# 	personal_email: student_params[:personal_email], 
@@ -25,7 +26,7 @@ class StudentsController < ApplicationController
    	else
    		render 'new'
    	end
-   end
+  end
 
    def edit
       @student = Student.find(params[:id])
@@ -36,13 +37,13 @@ class StudentsController < ApplicationController
    	      if @student.update(student_params)
    	      	redirect_to students_path, notice: 'Student has been updated successfully'
    	      else
-   	      	render :edit  
+   	      	render :edit
    	      end
    end
 
    def show
    	# debugger
-   	@student = Student.find(params[:id])
+   	@students = Student.find(params[:id])
    end
  
   private
@@ -55,7 +56,5 @@ class StudentsController < ApplicationController
    # 	params.require(:student).permit(:name, :title,
    # 	 :personal_email, :rool_number, :city, :state, :country,
    # 	 :pincode, :address)
-   # end
-
-   
+   # end  
 end
