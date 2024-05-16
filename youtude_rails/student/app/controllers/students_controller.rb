@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+before_action :set_student, only: [:edit , :update, :show , :destroy]
 	def index
 		@students = Student.all
 	end
@@ -10,17 +11,6 @@ class StudentsController < ApplicationController
   def create
    	@student = Student.new(student_params)
        Student.new(student_params)
-   	# @student = Student.new(name: student_params[:name], 
-   	# 	title: student_params[:title],
-   	# 	personal_email: student_params[:personal_email], 
-   	# 	rool_number: student_params[:rool_number], 
-   	# 	city: student_params[:city],
-   	#    state: student_params[:state],
-   	#    country: student_params[:country],
-   	#    pincode: student_params[:pincode],
-   	#    address: student_params[:address])
-   	# @student = Student.new(student_params)
-
    	if @student.save
    		redirect_to students_path , notice: 'Student has been created successfully'
    	else
@@ -29,28 +19,37 @@ class StudentsController < ApplicationController
   end
 
    def edit
-      @student = Student.find(params[:id])
    end
 
    def update
-   	      @student = Student.find(params[:id])
-   	      if @student.update(student_params)
-   	      	redirect_to students_path, notice: 'Student has been updated successfully'
-   	      else
-   	      	render :edit
-   	      end
+    if @student.update(student_params)
+    	redirect_to students_path, notice: 'Student has been updated successfully'
+    else
+    	render :edit
+    end
    end
 
    def show
    	# debugger
-   	@students = Student.find(params[:id])
+   end
+
+   def destroy
+      if @student.destroy
+               redirect_to students_path, notice: 'Student has been deleted successfully'
+            
+            end
    end
  
   private
    def student_params
     	params.require(:student).permit(:name, :title, :personal_email, :rool_number, :city, :state, :country, :pincode, :address)
    end
-
+  
+  def set_student
+       @student = Student.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => error
+                     redirect_to students_path, notice: error
+  end
    # private
    # def student_params
    # 	params.require(:student).permit(:name, :title,

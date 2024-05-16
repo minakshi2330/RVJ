@@ -36,7 +36,15 @@ class TeachersController < ApplicationController
    	# debugger
    	@teacher =Teacher.find(params[:id])
    end
- 
+
+ def destroy
+   @teacher =Teacher.find(params[:id])
+      if @teacher.destroy
+               redirect_to teachers_path, notice: 'Teachers has been deleted successfully'
+               
+            end
+   end
+
   private
    def teacher_params
     	params.require(:teacher).permit(:first_name, :last_name, :email, :subject, :address)
