@@ -10,7 +10,7 @@ before_action :set_student, only: [:edit , :update, :show , :destroy]
    
   def create
    	@student = Student.new(student_params)
-       Student.new(student_params)
+       # Student.new(student_params)
    	if @student.save
    		redirect_to students_path , notice: 'Student has been created successfully'
    	else

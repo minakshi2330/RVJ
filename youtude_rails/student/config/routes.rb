@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
     resources :students
     resources :teachers
+    resources :courses
     #public pages routes
   get 'about' => 'pages#about_us'
   get 'contact' => 'pages#contact_us'
