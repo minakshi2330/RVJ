@@ -47,7 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_17_062128) do
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
   end
 
-  create_table "students_teachers", id: false, force: :cascade do |t|
+  create_table "connetion", id: false, force: :cascade do |t|
     t.integer "teacher_id", null: false
     t.integer "student_id", null: false
   end

@@ -1,4 +1,4 @@
-class StudentsTeacher < ApplicationRecord
+class Connection < ApplicationRecord
 	belongs_to :teacher 
     belongs_to :student
 
