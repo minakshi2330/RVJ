@@ -2,7 +2,7 @@
  	<%= flash[:notice] %>
   <div class="card rounded-0 mt-5 mb-5">
 	<div class="card-body">
-  <h1 class="text-center">Listing Students</h1>
+  <h1 class="text-center">Listing Teacher</h1>
 	</div>
 	
   </div>
@@ -13,7 +13,7 @@
 	<thead>
 		<tr>
 		<th> Course Name</th>
-		<th> Student</th>
+		<th> Teacher</th>
 		<th> Action</th>
 		</tr>
 	</thead>
@@ -21,7 +21,7 @@
 		<% @courses.each do |course|   %>
 		<tr>
 			<td><%= course.c_name %></td>
-			<td><%= course.student.name %></td>
+			<td><%= course.teacher.first_name %></td>
 			<td> <%= link_to "Edit" , edit_course_path(course), class: "btn btn-primary"   %></td>
 
 			<td> <%= link_to "View" , course_path(course), class: "btn btn-info"   %></td>
