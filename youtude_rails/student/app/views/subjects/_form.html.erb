@@ -1,0 +1,22 @@
+<%= form_with model: @subject do |form| %>
+
+<div class="row">
+	<div class="col-lg-4">
+		<div class="from-group">
+			<%= form.label :sub_name, class: 'mb-2' %>
+			<%= form.text_field  :sub_name, class: 'form-control form-control-lg'%>
+			  	<%  @subject.errors.full_messages_for(:sub_name).each do |message| %>
+			  	  <p class="text-danger"><%= message%></p>
+                 <% end %>
+		</div>
+</div>
+
+<div class="row">
+		<div class="col-lg-12 mt-4">
+		<%= form.submit class: 'btn btn-primary btn-lg' %>
+
+        <%= link_to "Back to Subject" , subjects_path, class: "btn btn-outline-primary btn-lg " %>
+		</div>
+	</div>
+
+<% end %>

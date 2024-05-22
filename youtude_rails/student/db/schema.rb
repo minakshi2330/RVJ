@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_17_062128) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_22_092619) do
   create_table "courses", force: :cascade do |t|
     t.string "c_name"
     t.integer "teacher_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["teacher_id"], name: "index_courses_on_student_id"
+    t.index ["teacher_id"], name: "index_courses_on_teacher_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -47,9 +47,20 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_17_062128) do
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
   end
 
-  create_table "enrollment", id: false, force: :cascade do |t|
+  create_table "students_teachers", id: false, force: :cascade do |t|
     t.integer "teacher_id", null: false
     t.integer "student_id", null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "sub_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects_teachers", id: false, force: :cascade do |t|
+    t.integer "subject_id", null: false
+    t.integer "teacher_id", null: false
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -84,5 +95,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_17_062128) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "courses", "students"
+  add_foreign_key "courses", "teachers"
 end
