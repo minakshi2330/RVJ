@@ -1,5 +1,5 @@
 class CreateSubjectsTeachersJoinTable < ActiveRecord::Migration[7.0]
   def change
-    create_join_table :subjects ,:teachers
+     add_column :teachers , :subject_id , :integer
   end
 end

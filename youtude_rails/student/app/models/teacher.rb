@@ -1,9 +1,9 @@
 class Teacher < ApplicationRecord
   has_many :courses
-  has_many :subjects
+  belongs_to :subject
 	# has_many :students_teachers
 	validates :first_name , :last_name , presence: true
 validates :email , presence: true , uniqueness: true
-validates :address ,:subject, presence: true
+validates :address , presence: true
 
 end

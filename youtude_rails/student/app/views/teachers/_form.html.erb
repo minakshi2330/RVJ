@@ -38,7 +38,7 @@
 <div class="row">
 	<div class="col-lg-4">
 		<div class="from-group">
-			<%= form.label :email, class: 'mb-2' %>
+			<%= form.label :Email, class: 'mb-2' %>
 			<%= form.email_field :email, class: 'form-control form-control-lg'%>
 			<%  @teacher.errors.full_messages_for(:email).each do |message| %>
 			  	  <p class="text-danger"><%= message%></p>
@@ -50,12 +50,10 @@
 	<div class="col-lg-4">
 		<div class="from-group">
 			<%= form.label :Subject, class: 'mb-2' %>
-			<%= form.text_field :subject, class: 'form-control form-control-lg'%>
-			<%  @teacher.errors.full_messages_for(:subject).each do |message| %>
-			  	  <p class="text-danger"><%= message%></p>
-                 <% end %>
-		</div>
+	 <%= form.select :subject_id, options_from_collection_for_select(Subject.all, :id, :sub_name), {}, class: 'form-control form-control-lg' %>
+   </div>
 	</div>
+    
 </div>
 
 
@@ -75,12 +73,7 @@
     
 
 
-<div class="row">
-	<div class="col-lg-4">
-		<div class="from-group">
-	 <%= form.select :subject_id, options_from_collection_for_select(Subject.all, :id, :sub_name), {}, class: 'form-control form-control-lg' %>
-   </div>
-	</div>
+
     
 	</div>
 

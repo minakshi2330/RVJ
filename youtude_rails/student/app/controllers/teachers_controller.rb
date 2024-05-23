@@ -10,7 +10,6 @@ class TeachersController < ApplicationController
    
   def create
    	@teacher = Teacher.new(teacher_params)
-    Teacher.new(teacher_params)
 
    	if @teacher.save
    		redirect_to teachers_path , notice: 'teacher has been created successfully'
@@ -47,7 +46,7 @@ class TeachersController < ApplicationController
 
   private
    def teacher_params
-    	params.require(:teacher).permit(:first_name, :last_name, :email, :subject, :address)
+    	params.require(:teacher).permit(:first_name, :last_name, :email, :subject_id, :address)
    end
 
 end
