@@ -35,9 +35,8 @@ before_action :set_student, only: [:edit , :update, :show , :destroy]
 
    def destroy
       if @student.destroy
-               redirect_to students_path, notice: 'Student has been deleted successfully'
-            
-            end
+       redirect_to students_path, notice: 'Student has been deleted successfully' 
+      end
    end
  
   private
