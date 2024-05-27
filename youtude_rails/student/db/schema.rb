@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_23_081536) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_27_062448) do
   create_table "courses", force: :cascade do |t|
     t.string "c_name"
     t.integer "teacher_id", null: false
@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_23_081536) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.integer "subjects"
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
   end
 
